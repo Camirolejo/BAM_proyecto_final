@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'DM Serif Display', serif;
+}
+.hero-image{
+    background-image: url(../img/gato-cafe.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height:fit-content;
+    justify-content: center;
+    transition: .3s;
+}
+nav img{
+    filter: invert(100%);
+    height: 80px;
+    transition: .3s;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul li{
+    margin: 10px;
+    margin-top: 0;
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: .3s;
+    text-shadow: 0 0 10px #000;
+}
+section#menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+main h2{
+    font-size: 3em;
+    text-align: center;
+}
+section div h1{
+    font-size: 4em;
+    padding-left: 20px;
+    text-shadow: 0 0 10px #000;
+}
+section div p{
+    font-size: 2em;
+    padding: 20px;
+    text-shadow: 0 0 10px #000;
+}
+div.card{
+    margin: 20px;
+    background-color: #b25824;
+    width: 20%;
+    height: 40%;
+}
+div.card img.img-menu{
+    width: 100%;
+    height: 80%;
+}
+div.card h3{
+    text-align: center;
+    color: #e7e7e7;
+    font-size: 0.9em;
+    padding: 5px;
+}
