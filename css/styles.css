@@ -5,81 +5,438 @@
     scroll-behavior: smooth;
     font-family: 'DM Serif Display', serif;
 }
+body{
+    background-color: #fcf3e6;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #add8e675;
+ }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: pink;
+    border-radius: 20px;
+}
+/*para el loader*/
+.contenedor-loader{
+    background-color: lightblue;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    transition: all 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader,
+.loader:before,
+.loader:after{
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 1.5s infinite ease-in-out;
+}
+.loader{
+    color: pink;
+    font-size: 13px;
+    position: relative;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after{
+    content: "";
+    position: absolute;
+    top: 0;
+}
+.loader::before{
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+.loader::after{
+    left: 3.5em;
+}
+
+@keyframes loader{
+    0%,
+    80%,
+    100%{
+        box-shadow : 0 2.5em 0 -1.3em;
+    }
+    40%{
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+/*-----------*/
+
+a{
+    text-decoration: none;
+}
 .hero-image{
-    background-image: url(../img/gato-cafe.jpg);
+    background-image: url(../img/fondo-catcafe.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: pink;
+    text-shadow: 0 0 10px rgb(36, 35, 35);
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.hero-titulo{
+    font-size: 4em;
+    text-align: center;
+}
+.hero-mensaje{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.toggle-menu{
+    width: 40px;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 1;
+}
+.toggle-menu img{
+    max-width: 100%;
+    cursor: pointer;
+    filter: invert(1);
 }
 nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    width: 100vw;
-    height:fit-content;
+    flex-direction: column;
     justify-content: center;
-    transition: .3s;
+    align-items: center;
+    height: 100vh;
+    display: none;
 }
-nav img{
-    filter: invert(100%);
-    height: 80px;
-    transition: .3s;
-}
+
 nav ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 nav ul li{
-    margin: 10px;
-    margin-top: 0;
     list-style: none;
+    margin: 1em;
+    padding: 0.3em;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+nav ul li.hover-li:hover{
+    border: 1px solid #000;
 }
 nav ul li a{
     color: #fff;
-    text-decoration: none;
     font-size: 1.5em;
-    transition: .3s;
-    text-shadow: 0 0 10px #000;
+    font-weight: 600;
+    letter-spacing: 0.1em;
 }
-section#menu{
+nav ul li a img{
+    height: 60px;
+    filter: invert(1);
+    margin-top: 0.2em;
+}
+
+/*se ve en descktop*/
+@media screen and (min-width: 950px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 60px;
+        justify-content: center;
+        transition: .3s;
+        z-index: 3;
+    }
+    nav{
+        flex-direction: row;
+    }
+    .toggle-menu{
+        display: none;
+    }
+    nav ul{
+        flex-direction: row;
+    }
+    .hero-titulo{
+        font-size: 5em;
+    }
+    .hero-mensaje{
+        font-size: 3em;
+    }
+
+}
+@media screen and (max-width: 350px){
+    .hero-titulo{
+        font-size: 3em;
+    }
+    .hero-mensaje{
+        font-size: 1.5em;
+    }
+}
+
+nav.show{/*para que se muestre la nav en mobile*/
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: pink;
+}
+main{
+    display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
 }
 main h2{
     font-size: 3em;
     text-align: center;
 }
-section div h1{
-    font-size: 4em;
-    padding-left: 20px;
-    text-shadow: 0 0 10px #000;
+section#reglas ol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-section div p{
-    font-size: 2em;
-    padding: 20px;
-    text-shadow: 0 0 10px #000;
+section#reglas ol li{
+    width: 80vw;
 }
-div.card{
-    margin: 20px;
-    background-color: #b25824;
-    width: 20%;
-    height: 40%;
-}
-div.card img.img-menu{
-    width: 100%;
-    height: 80%;
-}
-div.card h3{
-    text-align: center;
-    color: #e7e7e7;
-    font-size: 0.9em;
+section#reglas ol li div{
+    margin: 10px;
+    border-radius: 20px;
     padding: 5px;
+    border: 1px solid #000;
+}
+section#reglas{
+    width: 80vw;
+    scroll-margin-top: 3em;
+}
+div.regla:hover{
+    background-color: rgb(255, 233, 233);
+}
+section#reglas h2{
+    font-size: 4em;
+    color:pink;
+}
+div.regla h3{
+    font-size: 2em;
+}
+section#reglas p{
+    font-size: 1.5em;
+}
+div.regla h3,
+div.regla p{
+    color: pink;
+    text-align: center;
+}
+section#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    scroll-margin-top: 3em;
+}
+section#about h2{
+    font-size: 4em;
+    color: lightblue;
+}
+div.about{
+    background-image: url(../img/gato-en-silla.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+div.about-contenido{
+    height: fit-content;
+    width: 90%;
+    backdrop-filter: blur(15px);
+    padding: 1em;
+    border: 1px solid #ffffff28;
+    border-radius: 20px;
+}
+div.about-contenido p{
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*sección adopción*/
+section#adopcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    scroll-margin-top: 3em;
+}
+div.adopcion-carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: fit-content;
+}
+div.carrusel-imagen{
+    height: 90%;
+    width: calc(100% / 3);
+    background-color: #d1d1d1;
+    margin: 1em;
+    border-radius: 20px;
+}
+div.carrusel-imagen img{
+    max-width: 100%;
+    max-height: 100%;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+div.carrusel-imagen img:hover{
+    transform: scale(1.1);
+    border: 3px dashed lightblue;
+}
+button.btn-ant,
+button.btn-sig{
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+}
+button.btn-ant{
+    left: 2em;
+}
+button.btn-sig{
+    right: 2em;
+}
+section#adopcion h2{
+    font-size: 4em;
+    color:pink;
+}
+section#adopcion p{
+    color: lightblue;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+div.redes-direccion{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffc0cb34;
+}
+div.redes-direccion div.ubicacion{
+    width: calc(100% / 2);
+    height: 10vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid pink;
+}
+div.redes-direccion div.ubicacion p{
+    font-size: 1.3em;
+    margin-top: 0.2em;
+    display: inline-block;
+    text-align: center;
+}
+div.redes-direccion div.ubicacion strong{
+    font-weight: 400;
+}
+div.redes-direccion div.redes{
+    width: calc(100% / 2);
+    height: 10vh;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.redes-direccion div.redes img{
+    height: 2em;
+    width: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+div.redes-direccion div.ubicacion h3,
+div.redes-direccion div.redes h3{
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 20px #d1d1d1;
+}
+div.redes ul{
+    display: flex;
+    justify-content: center;
+}
+div.redes ul li{
+    list-style: none;
+}
+div.redes ul li a img{
+    height: 2em;
+    width: 2em;
+}
+iframe {
+    width: 100%;
+    height: 20%;
+    border: none;
+}
+footer{
+    background-color: pink;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 768px){
+    section#reglas h2,
+    section#adopcion h2,
+    section#about h2{
+        font-size: 3em;
+    }
+    section#reglas div.regla h3{
+        font-size: 1.5em;
+    }
+    section#reglas p,
+    section#about p{
+        font-size: 1.2em;
+    }
+    div.carrusel-imagen{
+        margin: 0.5em;
+    }
+    div.adopcion-carrusel{
+        width: 85%;
+    }
+    button.btn-ant,
+    button.btn-sig{
+    height: 2em;
+    width: 2em;
+    }
+    button.btn-ant{
+        left: 1em;
+    }
+    button.btn-sig{
+        right: 1em;
+    }
+}
+@media screen and (max-width: 1024px){
+    
 }

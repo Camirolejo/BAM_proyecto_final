@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'DM Serif Display', serif;
+}
+*:focus{
+    outline: none;
+}
+*::placeholder{
+    color: #fff;
+    font-size: 1.2em;
+}
+body{
+    background-color: #fcf3e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+h1{
+    position: absolute;
+    top: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    color: pink;
+}
+a{
+    margin: 0.5em;
+    border-radius: 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: pink;
+    padding: 0 0.5em 0 0.5em;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+a:hover{
+    background-color: pink;
+    color: #fff;
+}
+main{
+    width: 70vw;
+    height: 80vh;
+    background-color: lightblue;
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+main .imagen{
+    height: 100%;
+    width: 50%;
+    background-image: url(../img/gato-con-flor.jpg);
+    opacity: 0.6;
+    margin-left: auto;
+    background-size: cover;
+    background-position: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+label{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+input,
+textarea{
+    border: none;
+    width: 80%;
+    margin: 0.5em;
+    background-color: transparent;
+    border-bottom: 1px solid #fcf3e6;
+    color: #fcf3e6;
+    font-size: 1.2em;
+}
+
+input[type = "submit"],
+input[type ="reset"]{
+    margin: 0.5em;
+    border-radius: 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: transparent;
+    padding: 0 0.5em 0 0.5em;
+    transition: .3s;
+    width: 25%;
+    cursor: pointer;
+}
+input[type = "submit"]:hover,
+input[type ="reset"]:hover{
+    background-color: pink;
+}
