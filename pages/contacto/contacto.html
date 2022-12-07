@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
+  <title>Contacto | meow café</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,24 @@
 <body>
   <a href="../../index.html">Volver</a>
 
-  <h1>Completá el formulario<br>para que nos pongamos en contacto con vos!</h1>
+  <div class="popUp">
+    <div class="contenido-popUp">
+      <div class="cerrarPopUp">
+        <img src="./img/close.png" alt="imagen de cruz">
+      </div>
+      <div class="imgPopUp">
+        <img src="./img/gato.png" alt="imágen de gato que cumple años">
+      </div>
+
+      <div class="contenido">
+        <h2>Mandanos un mensaje y nos pondremos en contacto contigo!</h2>
+      </div>
+    </div>
+  </div>
 
   <main>
 
-    <form>
+    <form method="post" action="https://formspree.io/f/xrgdnpdp">
       <label for="nombre">Nombre *</label>
       <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
 
@@ -39,6 +52,8 @@
 
     <div class="imagen"></div>
   </main>
+
+  <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>

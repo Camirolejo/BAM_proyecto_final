@@ -12,18 +12,32 @@
   <link rel="shortcut icon" href="./img/favicon-negro.png" type="image/x-icon">
 </head>
 <body>
-
+ 
     <div class="toggle-menu">
         <img src="./img/icono-hamburguesa-menu.png" alt="">
     </div>
   <nav>
     <ul>
       <li><a href="../../index.html">Volver</a></li>
-      <li><a href="#">Carrito(<span id="cant-items">0</span>)</a></li>
+      <li class="carrito-btn">Carrito(<span id="cant-items">0</span>)</li>
     </ul>
   </nav>
 
   <img class="logo" src="./img/catcafe-logo.svg" alt="logo de gato">
+
+    <!--carrito-->
+    <div class="carrito">
+        <h2>Productos seleccionados</h2>
+        <hr>
+        
+        <div id="itemsDelCarrito">
+        <!--aca van los items del carrito-->
+        </div>
+
+        <div class="total-carrito">
+            <p>Total : $<span id="spanTotal">0</span></p>
+        </div>
+    </div>
 
   <main>
     <h2 id="menu">Menú</h2>
@@ -68,44 +82,44 @@
   
                 <div class="tartas">
                     <div class="item">
-                        <img src="./img/Pecan-Pie.jpg" alt="">
+                        <img src="./img/Pecan-Pie.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Pecan pie</h3>
+                            <h3 class="item-nombre 0">Pecan pie</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $1200</span>
+                            <p>Precio : $<span id="0">1700</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
   
                     <div class="item">
-                        <img src="./img/pie.jpg" alt="">
+                        <img src="./img/pie.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Merengue pie</h3>
+                            <h3 class="item-nombre 1">Merengue pie</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $1300</span>
+                            <p>Precio : $<span id="1">1500</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
   
                     <div class="item">
-                        <img src="./img/brownie_pie.jpg" alt="">
+                        <img src="./img/brownie_pie.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Brownie pie</h3>
+                            <h3 class="item-nombre 2">Brownie pie</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $1700</span>
+                            <p>Precio : $<span id="2">1400</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
   
                     <div class="item">
-                        <img src="./img/Blueberry-Galette.jpg" alt="">
+                        <img src="./img/Blueberry-Galette.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Blue Pie</h3>
+                            <h3 class="item-nombre 3">Blue Pie</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $1700</span>
+                            <p>Precio : $<span id="3">1900</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
@@ -119,41 +133,41 @@
   
                 <div class="cupcakes">
                     <div class="item">
-                        <img src="./img/Carrot-cupcake.jpg" alt="">
+                        <img src="./img/Carrot-cupcake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Carrot Cupcake</h3>
+                            <h3 class="item-nombre 4">Carrot Cupcake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $200</span>
+                            <p>Precio : $<span id="4">200</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/cupcake.jpg" alt="">
+                        <img src="./img/cupcake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Chips Cupcake</h3>
+                            <h3 class="item-nombre 5">Chips Cupcake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $250</span>
+                            <p>Precio : $<span id="5">250</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/Lemon-Mojito-Cupcake.jpg" alt="">
+                        <img src="./img/Lemon-Mojito-Cupcake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Mojito Cupcake</h3>
+                            <h3 class="item-nombre 6">Mojito Cupcake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $350</span>
+                            <p>Precio : $<span id="6">350</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/Perfect-Chocolate.jpg" alt="">
+                        <img src="./img/Perfect-Chocolate.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Choco Cupcake</h3>
+                            <h3 class="item-nombre 7">Choco Cupcake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $200</span>
+                            <p>Precio : $<span id="7">300</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
@@ -167,41 +181,41 @@
   
                 <div class="tortas">
                     <div class="item">
-                        <img src="./img/torta_frutillas.jpg" alt="">
+                        <img src="./img/torta_frutillas.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Strawberry Cake</h3>
+                            <h3 class="item-nombre 8">Strawberry Cake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $2300</span>
+                            <p>Precio : $<span id="8">2200</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/Vegan-Chocolate-Cake.jpg" alt="">
+                        <img src="./img/Vegan-Chocolate-Cake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Vegan Cake</h3>
+                            <h3 class="item-nombre 9">Vegan Cake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $600</span>
+                            <p>Precio : $<span id="9">600</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/triple_chocolate_cake.jpg" alt="">
+                        <img src="./img/triple_chocolate_cake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Chocolate Cake</h3>
+                            <h3 class="item-nombre 10">Chocolate Cake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $650</span>
+                            <p>Precio : $<span id="10">650</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/Tiramisu-Cake.jpg" alt="">
+                        <img src="./img/Tiramisu-Cake.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Tiramisu Cake</h3>
+                            <h3 class="item-nombre 11">Tiramisu Cake</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $2500</span>
+                            <p>Precio : $<span id="11">2500</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
@@ -214,41 +228,41 @@
   
                 <div class="bebidas">
                     <div class="item">
-                        <img src="./img/espresso-martini.jpg" alt="">
+                        <img src="./img/espresso-martini.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Espresso martini</h3>
+                            <h3 class="item-nombre 12">Espresso martini</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $700</span>
+                            <p>Precio : $<span id="12">700</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/Hot-Chocolate-taza.jpg" alt="">
+                        <img src="./img/Hot-Chocolate-taza.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Hot chocolate</h3>
+                            <h3 class="item-nombre 13">Hot chocolate</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $500</span>
+                            <p>Precio : $<span id="13">600</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/hot-chocolate.jpg" alt="">
+                        <img src="./img/hot-chocolate.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Ice Coffe</h3>
+                            <h3 class="item-nombre 14">Ice Coffe</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $700</span>
+                            <p>Precio : $<span id="14">800</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/matcha_green_ smoothie.jpg" alt="">
+                        <img src="./img/matcha_green_ smoothie.jpg" alt="" class="imagen">
                         <div class="item-info">
-                            <h3 class="item-nombre">Matcha smoothie</h3>
+                            <h3 class="item-nombre 15">Matcha smoothie</h3>
                             <p class="item-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <span>Precio : $750</span>
+                            <p>Precio : $<span id="15">750</span></p>
   
                             <button>Agregar al carrito</button>
                         </div>

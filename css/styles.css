@@ -291,7 +291,7 @@ div.adopcion-carrusel{
 }
 div.carrusel-imagen{
     height: 90%;
-    width: calc(100% / 3);
+    width: 30%;
     background-color: #d1d1d1;
     margin: 1em;
     border-radius: 20px;
@@ -406,11 +406,15 @@ footer p{
     color: #fff;
     font-size: 1.5em;
 }
+
 @media screen and (max-width: 768px){
     section#reglas h2,
     section#adopcion h2,
     section#about h2{
         font-size: 3em;
+    }
+    section#adopcion{
+        height: 70vh;
     }
     section#reglas div.regla h3{
         font-size: 1.5em;
@@ -421,6 +425,8 @@ footer p{
     }
     div.carrusel-imagen{
         margin: 0.5em;
+        height: 70%;
+        width: 35%;
     }
     div.adopcion-carrusel{
         width: 85%;
@@ -436,7 +442,87 @@ footer p{
     button.btn-sig{
         right: 1em;
     }
+    div.about{
+        width: 80%;
+        height: 50vh;
+    }
 }
-@media screen and (max-width: 1024px){
-    
+@media screen and (max-width: 480px){
+    section#reglas div.regla h3{
+        font-size: 1.3em;
+    }
+    section#reglas p{
+        font-size: 1em;
+    }
+    section#about p{
+        font-size: 0.8em;
+    }
+    section#adopcion p{
+        font-size: 1.1em;
+    }
+    div.redes-direccion div.ubicacion p{
+        font-size: 1em;
+    }
+    footer p{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 320px){
+    .hero-mensaje{
+        font-size: 1.3em;
+    }
+    section#reglas h2,
+    section#adopcion h2,
+    section#about h2{
+        font-size: 2.5em;
+    }
+    section#reglas div.regla h3{
+        font-size: 0.9em;
+    }
+    section#reglas p{
+        font-size: 0.7em;
+    }
+    section#about h2 {
+        font-size: 2em;
+    }
+    div.about {
+        height: 40vh;
+    }
+    section#about p{
+        font-size: 0.5em;
+    }
+    section#adopcion p{
+        font-size: 0.8em;
+        padding: 0 10px 0 10px;
+    }
+    button.btn-ant, button.btn-sig{
+        height: 1em;
+        width: 1em;
+    }  
+    div.adopcion-carrusel{
+        width: 90%;
+        height: 50%;
+    }
+    div.carrusel-imagen{
+        margin: 0.2em;
+    }
+    div.redes-direccion div.ubicacion h3,
+    div.redes-direccion div.redes h3{
+        font-size: 1.5em;
+    }
+    div.redes-direccion div.ubicacion p{
+        font-size: 0.6em;
+    }
+    div.redes-direccion div.redes img {
+        height: 1em;
+        width: 1em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    footer p {
+        font-size: 1em;
+    }
+    div.redes-direccion{
+        margin-top: 0;
+    }
 }
