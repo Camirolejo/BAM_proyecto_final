@@ -492,7 +492,7 @@ footer p{
         font-size: 0.5em;
     }
     section#adopcion p{
-        font-size: 0.8em;
+        font-size: 0.7em;
         padding: 0 10px 0 10px;
     }
     button.btn-ant, button.btn-sig{
@@ -508,16 +508,28 @@ footer p{
     }
     div.redes-direccion div.ubicacion h3,
     div.redes-direccion div.redes h3{
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    div.redes-direccion div.redes{
+        padding: 1em;
+    }
+    div.redes-direccion div.ubicacion{
+        padding: 1em;
+    }
+    div.redes-direccion div.redes img{
+        height: 1.1em;
+        width: 1.1em;
     }
     div.redes-direccion div.ubicacion p{
         font-size: 0.6em;
     }
+    div.redes ul{
+        justify-content: space-evenly;
+    }
     div.redes-direccion div.redes img {
         height: 1em;
         width: 1em;
-        margin-left: 2em;
-        margin-right: 2em;
+        margin: 0;
     }
     footer p {
         font-size: 1em;
@@ -525,4 +537,5 @@ footer p{
     div.redes-direccion{
         margin-top: 0;
     }
+
 }

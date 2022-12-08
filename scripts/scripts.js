@@ -54,7 +54,7 @@ btnSig.addEventListener("click", function(){
     tercAtributo = terc.getAttribute("src");//obtengo lo que hay en el atributo src
     numImagen3 = parseInt(tercAtributo.slice(15,16));//corto la cadena para obtener el número de imágen
     
-    prim.setAttribute("src", `./img/cats/img-${numImagen2}.jpg`);// a la primera imágen le doy el atributo src con el 
+    prim.setAttribute("src", `./img/cats/img-${numImagen2}.jpg`);// a la primera imágen le modifico el atributo src con el 
     //mismo contenido solo que cambio el número de imágen al de la imagen de la derecha 
 
     seg.setAttribute("src", `./img/cats/img-${numImagen3}.jpg`);//a la segunda imágen lo mismo 
@@ -62,7 +62,7 @@ btnSig.addEventListener("click", function(){
     if(numImagen3 === 9){//mis imágenes solo llegan hasta el nueve
         numImagen3 = -1;// -1 ya que abajo le sumo 1 lo que me da 0 (que es el número de la primera imágen)
     }
-    terc.setAttribute("src", `./img/cats/img-${numImagen3 + 1}.jpg`);//a la tercera imágen le doy el atributo src con el
+    terc.setAttribute("src", `./img/cats/img-${numImagen3 + 1}.jpg`);//a la tercera imágen le modifico el atributo src con el
     //mismo contenido solo que al número de imágen le sumo 1 para que avance hacia la derecha
 
 });
@@ -74,16 +74,16 @@ btnAnt.addEventListener("click", function(){
     segAtributo = seg.getAttribute("src");//obtengo lo que hay en el atributo src
     numImagen2 = parseInt(segAtributo.slice(15,16));//corto la cadena para obtener el número de imágen
  
-    terc.setAttribute("src", `./img/cats/img-${numImagen2}.jpg`);//a la tercera imágen le doy el atributo src
+    terc.setAttribute("src", `./img/cats/img-${numImagen2}.jpg`);//a la tercera imágen le modifico el atributo src
     //con el mismo contenido pero el número de imágen es el de la imagen a la izquierda de este
 
-    seg.setAttribute("src", `./img/cats/img-${numImagen1}.jpg`);// a la segunda imágen le doy el atributo src
+    seg.setAttribute("src", `./img/cats/img-${numImagen1}.jpg`);// a la segunda imágen le modifico el atributo src
     //con el mismo contenido solo que el número de imagen es el de la imágen a la izquierda de este
 
     if(numImagen1 === 0){//si el numero de imágen es 0 (el primero)
         numImagen1 = 10;//lo paso a 10 ya que abajo se resta 1 y queda en 9 que es la última imágen
     }
-    prim.setAttribute("src", `./img/cats/img-${numImagen1 - 1}.jpg`);//a la primera imágen le doy el atributo
+    prim.setAttribute("src", `./img/cats/img-${numImagen1 - 1}.jpg`);//a la primera imágen le modifico el atributo
     //src con el mismo contenido solo que le cambio el número de imágen a uno menos.
 });
 

@@ -225,7 +225,7 @@ div.carrito{
     overflow-y: scroll;
     top: 66.5px;
     right: 5px;
-    width: 30vw;
+    width: 50vw;
     height: fit-content;
     max-height: 60vh;
     background-color: #fff;
@@ -263,6 +263,7 @@ div.item-carrito{
     justify-content: space-between;
 }
 div.item-info-carrito h3{
+    font-weight: 400;
     color: lightblue;
 }
 div.item-infocarrito p{
@@ -297,6 +298,7 @@ div.item-imagen-carrito img{
     min-height: 100%;
     min-width: 100%;
     max-height: 100%;
+    border-radius: 50%;
 }
 div.item span.precio-carrito,
 div.item span.cantidad-carrito{
@@ -363,13 +365,13 @@ div.item span.cantidad-carrito{
 }
 @media screen and (max-width: 450px){
     nav.hidden{
-        height: 8vh;
+        height: 10vh;
     }
     section#menu{
         height: 20vh;
     }
     div.card h3.menu-nombre{
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     div.item-info h3{
         font-size: 0.8em;
@@ -388,6 +390,10 @@ div.item span.cantidad-carrito{
     }
 }
 @media screen and (max-width: 280px){
+    div.card h3.menu-nombre{
+        font-size: 0.6em;
+        padding: 0;
+    }
     div.item-info h3{
         font-size: 0.6em;
     }
@@ -402,5 +408,20 @@ div.item span.cantidad-carrito{
     }
     div.carrito h2{
         font-size: 1em;
+    }
+    ul li{
+        font-size: 1.2em;
+    } 
+    div.toggle-menu{
+        height: 30px;
+    }
+    .items h2{
+        font-size: 2em;
+    }
+    main h2{
+        font-size: 2.5em;
+    }
+    .logo{
+        height: 3em;
     }
 }
